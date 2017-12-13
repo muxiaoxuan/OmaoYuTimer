@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">OmaoYuTimer</string>
+    <string name="start">开始</string>
+    <string name="pause">暂停</string>
+    <string name="carry_on">继续</string>
+    <string name="stop">停止</string>
+    <string name="explain">展示结果：</string>
+    <string name="zero">0</string>
 </resources>

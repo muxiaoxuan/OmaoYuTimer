@@ -55,6 +55,9 @@ public class Timer {
 	 * @param id Message.what = id
 	 */
 	public void startTimer(final int id){
+		if(mTimer != null){
+			stopTimer();
+		}
 		if (mTimer == null) {
 			mTimer = new java.util.Timer();
 		}
@@ -63,13 +66,13 @@ public class Timer {
 			mTimerTask = new TimerTask() {
 				@Override
 				public void run() {
-					sendMessage(id, count);
 					do {
 						try {
 							Thread.sleep(intervalTime);
 						} catch (InterruptedException e) {
 						}
 					} while (isPause);
+					sendMessage(id, count);
 					if(isIncreasing){
 						count ++;
 					} else {
